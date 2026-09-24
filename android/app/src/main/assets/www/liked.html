@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Melofy — Liked Songs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/player.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span class="logo-mark">●</span> Melofy</div>
+    <nav class="sidebar-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="search.html">Search</a>
+      <a class="nav-link" href="library.html">Your Library</a>
+    </nav>
+    <div class="sidebar-section">
+      <div class="sidebar-section-head">
+        <span>Playlists</span>
+        <button id="create-playlist-btn" class="icon-btn small" aria-label="Create playlist">+</button>
+      </div>
+      <a class="sidebar-playlist-link" href="liked.html">♥ Liked Songs</a>
+      <div id="sidebar-playlists"></div>
+    </div>
+  </aside>
+
+  <div class="main-column">
+    <header class="topbar">
+      <div class="topbar-title">Liked Songs</div>
+      <button id="settings-gear" class="icon-btn" aria-label="Settings">⚙️</button>
+    </header>
+    <main class="main-content">
+      <div class="detail-header">
+        <div class="detail-art liked-art">♥</div>
+        <div>
+          <p class="detail-kicker">Playlist</p>
+          <h1 class="detail-title">Liked Songs</h1>
+        </div>
+      </div>
+      <div class="detail-actions">
+        <button id="play-all-liked" class="btn-play-all"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Play</button>
+      </div>
+      <div class="song-list" id="liked-list"></div>
+    </main>
+  </div>
+</div>
+
+<nav class="mobile-tabbar">
+  <a href="index.html" class="tab-link"><span class="tab-icon">🏠</span>Home</a>
+  <a href="search.html" class="tab-link"><span class="tab-icon">🔍</span>Search</a>
+  <a href="library.html" class="tab-link"><span class="tab-icon">📚</span>Library</a>
+</nav>
+
+<div id="player-bar-root"></div>
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script src="js/storage.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/player.js" defer></script>
+<script src="js/playerbar.js" defer></script>
+<script src="js/common.js" defer></script>
+<script src="js/liked.js" defer></script>
+</body>
+</html>

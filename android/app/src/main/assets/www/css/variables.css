@@ -1,0 +1,38 @@
+:root {
+  /* Warm dark palette — tape-deck black, not neutral SaaS black */
+  --bg-void: #120F0C;
+  --bg-base: #17130F;
+  --bg-elevated: #1E1914;
+  --bg-highlight: #28221B;
+  --bg-card: #211B16;
+
+  /* Two purposeful accents: amber for control/action, rose for love/liked */
+  --accent: #F2A93C;
+  --accent-hover: #FFC266;
+  --accent-soft: rgba(242, 169, 60, 0.16);
+  --love: #E85D6B;
+
+  --text-primary: #F6F1EA;
+  --text-secondary: #B4A99C;
+  --text-muted: #7A6F62;
+  --border: #2E2721;
+
+  --danger: #E85D6B;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+
+  --sidebar-width: 232px;
+  --player-height: 88px;
+  --topbar-height: 60px;
+  --tabbar-height: 56px;
+
+  --font-display: 'Space Grotesk', 'Manrope', sans-serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --transition-fast: 120ms ease;
+  --transition-base: 220ms ease;
+  --shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
