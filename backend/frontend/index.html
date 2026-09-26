@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Melofy</title>
+<link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
+<link rel="icon" type="image/png" href="{% static 'icons/favicon-32.png' %}" sizes="32x32">
+<link rel="apple-touch-icon" href="{% static 'icons/apple-touch-icon.png' %}">
+<link rel="manifest" href="{% static 'site.webmanifest' %}">
+<meta name="theme-color" content="#120F0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/variables.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+<link rel="stylesheet" href="{% static 'css/components.css' %}">
+<link rel="stylesheet" href="{% static 'css/player.css' %}">
+</head>
+<body>
+
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-mark">&#9679;</span> Melofy</div>
+
+  <nav class="sidebar-nav">
+    <a class="nav-link" href="#/" data-route="/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+      Home
+    </a>
+    <a class="nav-link" href="#/search" data-route="/search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      Search
+    </a>
+    <a class="nav-link" href="#/library" data-route="/library">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16M4 4l14 2.5v13L4 17"/><path d="M18 9.5v6"/></svg>
+      Your Library
+    </a>
+  </nav>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-head">
+      <span>Playlists</span>
+      <button id="create-playlist-btn" class="icon-btn small" aria-label="Create playlist" onclick="openCreatePlaylistModal()">+</button>
+    </div>
+    <a class="sidebar-playlist-link" href="#/liked" style="padding-left:12px;">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;display:inline;vertical-align:-2px;margin-right:6px;"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9z"/></svg>
+      Liked Songs
+    </a>
+    <div id="sidebar-playlists"></div>
+  </div>
+
+  <div class="sidebar-account" id="sidebar-account"></div>
+</aside>
+
+<div class="app-shell">
+  <header class="topbar">
+    <button id="menu-btn" class="icon-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="topbar-title">Melofy</div>
+  </header>
+  <main class="main-content" id="main-content"></main>
+</div>
+
+<div class="sound-mixer" id="sound-mixer">
+  <div class="sound-mixer-panel" id="sound-mixer-panel">
+    <span class="sound-mixer-value" id="sound-mixer-value">80</span>
+    <input class="sound-mixer-slider" id="sound-mixer-slider" type="range" min="0" max="100" value="80">
+  </div>
+  <button class="sound-mixer-btn" id="sound-mixer-btn" aria-label="Sound mixer"></button>
+</div>
+
+<div id="player-bar-root"></div>
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script src="{% static 'js/storage.js' %}" defer></script>
+<script src="{% static 'js/ui.js' %}" defer></script>
+<script src="{% static 'js/player.js' %}" defer></script>
+<script src="{% static 'js/router.js' %}" defer></script>
+<script src="{% static 'js/sidebar.js' %}" defer></script>
+<script src="{% static 'js/soundMixer.js' %}" defer></script>
+<script src="{% static 'js/playerbar.js' %}" defer></script>
+<script src="{% static 'js/youtubeApi.js' %}" defer></script>
+<script src="{% static 'js/views/home.js' %}" defer></script>
+<script src="{% static 'js/views/search.js' %}" defer></script>
+<script src="{% static 'js/views/library.js' %}" defer></script>
+<script src="{% static 'js/views/liked.js' %}" defer></script>
+<script src="{% static 'js/views/playlist.js' %}" defer></script>
+<script type="module" src="{% static 'js/firebaseAuth.js' %}"></script>
+<script src="{% static 'js/app.js' %}" defer></script>
+</body>
+</html>
