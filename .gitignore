@@ -6,6 +6,7 @@ Thumbs.db
 .vscode/
 .idea/
 
+<<<<<<< HEAD
 # Python / Django backend
 backend/__pycache__/
 backend/**/__pycache__/
@@ -16,6 +17,8 @@ backend/staticfiles/
 backend/venv/
 backend/.venv/
 
+=======
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
 # Android / Gradle
 android/.gradle/
 android/build/
@@ -27,3 +30,9 @@ android/captures/
 android/.cxx/
 android/app/release/
 android/app/debug/
+<<<<<<< HEAD
+=======
+
+# Node (only if you ever add tooling)
+node_modules/
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3

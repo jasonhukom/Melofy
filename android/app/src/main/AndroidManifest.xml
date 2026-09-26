@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+<<<<<<< HEAD
     <!-- Needed to reach the Django backend, the YouTube IFrame API, and the
          YouTube Data API. -->
+=======
+    <!-- Needed so the WebView can load the YouTube IFrame API and reach
+         the YouTube Data API for search. -->
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -19,11 +24,15 @@
             android:exported="true"
             android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
             android:launchMode="singleTask">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+<<<<<<< HEAD
 
             <!-- Deep link used to hand control back to the app after Google
                  sign-in completes in a Chrome Custom Tab (see MainActivity's
@@ -35,6 +44,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="melofy" android:host="auth" />
             </intent-filter>
+=======
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
         </activity>
     </application>
 

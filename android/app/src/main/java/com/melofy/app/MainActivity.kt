@@ -1,16 +1,22 @@
 package com.melofy.app
 
 import android.annotation.SuppressLint
+<<<<<<< HEAD
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
+=======
+import android.os.Bundle
+import android.webkit.WebChromeClient
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD
 import androidx.browser.customtabs.CustomTabsIntent
 import org.json.JSONObject
 
@@ -24,17 +30,34 @@ import org.json.JSONObject
  * back via the melofy://auth/complete deep link + a one-time code (see
  * js/firebaseAuth.js and accounts/handoff.py on the backend) rather than a
  * normal cookie-based redirect.
+=======
+
+/**
+ * Thin WebView wrapper around the Melofy web app. The app's own HTML/CSS/JS
+ * is bundled in assets/www and loaded from there, so the UI shell works
+ * without a network connection — actual playback and search still need
+ * internet, since both talk to YouTube.
+ *
+ * To point this at a deployed copy instead (e.g. your Vercel URL) so the
+ * app always matches your latest deploy, change LOAD_URL below.
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
  */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
 
     companion object {
+<<<<<<< HEAD
         // Point this at your deployed backend (Vercel URL, custom domain,
         // etc.) — Google OAuth needs a real public HTTPS URL, so unlike the
         // earlier bundled-assets version, this can't just be a local copy.
         private const val APP_URL = "https://your-app.vercel.app/"
         private const val ANDROID_UA_SUFFIX = " MelofyAndroidApp/1.0"
+=======
+        private const val LOCAL_URL = "file:///android_asset/www/index.html"
+        // private const val REMOTE_URL = "https://your-app.vercel.app/"
+        private const val LOAD_URL = LOCAL_URL
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -47,12 +70,22 @@ class MainActivity : AppCompatActivity() {
         settings.javaScriptEnabled = true
         settings.domStorageEnabled = true
         settings.mediaPlaybackRequiresUserGesture = false
+<<<<<<< HEAD
         settings.cacheMode = WebSettings.LOAD_DEFAULT
         settings.userAgentString = settings.userAgentString + ANDROID_UA_SUFFIX
 
         webView.webViewClient = MelofyWebViewClient()
         webView.webChromeClient = WebChromeClient()
         webView.loadUrl(APP_URL)
+=======
+        settings.allowFileAccess = true
+        settings.cacheMode = WebSettings.LOAD_DEFAULT
+
+        webView.webViewClient = WebViewClient()
+        webView.webChromeClient = WebChromeClient()
+
+        webView.loadUrl(LOAD_URL)
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -64,6 +97,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+<<<<<<< HEAD
 
         handleDeepLink(intent)
     }
@@ -99,6 +133,8 @@ class MainActivity : AppCompatActivity() {
             }
             return false
         }
+=======
+>>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
     }
 
     override fun onDestroy() {
