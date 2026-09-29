@@ -7,6 +7,9 @@ Thumbs.db
 .idea/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f9f0867 (initial commit)
 # Python / Django backend
 backend/__pycache__/
 backend/**/__pycache__/
@@ -17,8 +20,11 @@ backend/staticfiles/
 backend/venv/
 backend/.venv/
 
+<<<<<<< HEAD
 =======
 >>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
+=======
+>>>>>>> f9f0867 (initial commit)
 # Android / Gradle
 android/.gradle/
 android/build/
@@ -31,8 +37,11 @@ android/.cxx/
 android/app/release/
 android/app/debug/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 # Node (only if you ever add tooling)
 node_modules/
 >>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
+=======
+>>>>>>> f9f0867 (initial commit)
