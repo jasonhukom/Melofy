@@ -1,6 +1,5 @@
 # Melofy
 
-<<<<<<< HEAD
 A free, YouTube-powered music player with a Spotify-style UI — now rebuilt
 as a proper Django + Python backend, with Google/YouTube account sign-in
 and a single-page app frontend so music never stops when you navigate. Plus
@@ -202,7 +201,6 @@ git remote add origin https://github.com/<you>/<repo>.git
 git push -u origin main
 ```
 
-<<<<<<< HEAD
 Then on [vercel.com](https://vercel.com): **Add New → Project** → import
 the repo → set the **Root Directory** to `backend`. Vercel auto-detects
 Django (zero configuration needed) from `manage.py` and the
@@ -327,4 +325,3 @@ that's safe to accept.
 ## License
 
 MIT — see `LICENSE`. Do whatever you like with it.
->>>>>>> 642a149240c8efabed4ba9732a0e6c1036e900b3
