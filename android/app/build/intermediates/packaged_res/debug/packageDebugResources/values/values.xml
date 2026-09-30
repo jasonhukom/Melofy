@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent">#F2A93C</color>
+    <color name="bg_void">#120F0C</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Melofy</string>
+    <style name="Theme.Melofy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/bg_void</item>
+        <item name="android:windowBackground">@color/bg_void</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">false</item>
+    </style>
+</resources>
